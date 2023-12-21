@@ -1,7 +1,7 @@
 
 const Reminders = () => {
   return (
-    <div>Reminders</div>
+    <div style={{ textAlign: "center" }}>No Reminders Task!</div>
   )
 }
 

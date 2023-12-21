@@ -1,10 +1,9 @@
-import React from 'react'
 import { useTaskContext } from '../context/TaskContext';
-import { Modal, Tooltip } from '@mui/material';
+import { Modal } from '@mui/material';
 
 // eslint-disable-next-line react/prop-types
 const DeleteConfirmModal = ({ isopenDeleteModal, setisopenDeleteModal, deleteIndex, setDeleteIndex }) => {
-  const { taskArr, settaskArr, setEditIndex, setEditObj, editObj, editIndex } = useTaskContext();
+  const { taskArr, settaskArr,  } = useTaskContext();
 
   function handleCloseModal() {
     setisopenDeleteModal(false)
@@ -30,15 +29,16 @@ const DeleteConfirmModal = ({ isopenDeleteModal, setisopenDeleteModal, deleteInd
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "",
       }}
     >
 
-      <div style={{ width: "400px", border: `2px solid red`, outline: 'none' }}>
+      <div className='deleteConfirmModal'>
 
-        Do you want to delete the task?
-        <button onClick={handleYesClick}>Yes</button>
-        <button onClick={handleNoClick}>No</button>
+        <h3>   Do you want to delete the task?</h3>
+        <div>
+          <button onClick={handleYesClick}>Yes</button>
+          <button onClick={handleNoClick}>No</button>
+        </div>
 
       </div>
 

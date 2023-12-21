@@ -9,6 +9,7 @@ const UserClickedcomponent = ({ activeTabIndex }) => {
     <>
       {activeTabIndex == 0 && <Notes />}
       {activeTabIndex == 1 && <Reminders />}
+      {/* {activeTabIndex == 2 && <Qwert />} */}
 
 
     </>

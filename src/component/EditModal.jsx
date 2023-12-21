@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Modal, Tooltip } from '@mui/material'
-import React from 'react'
 import { useTaskContext } from '../context/TaskContext';
+import "../styles/editModal.css"
 
 const EditModal = ({ isopenEditModal, setisopenEditModal }) => {
     const { taskArr, settaskArr, setEditIndex, setEditObj, editObj, editIndex } = useTaskContext();
@@ -29,20 +29,20 @@ const EditModal = ({ isopenEditModal, setisopenEditModal }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                background: "",
+                background: "transparent",
+
             }}
         >
 
-            <div style={{ width: "400px", border: `2px solid red`, outline: 'none' }}>
+            <div >
 
                 {
                     //edit form
-                    editObj && <div>
-                        <h1>popup</h1>
+                    editObj && <div className='editModal'>
                         <input type="text" placeholder='title...' value={editObj.title}
                             onChange={(e) => setEditObj({ ...editObj, title: e.target.value })} />
 
-                        <input type="text" autoFocus placeholder='take a notes..' value={editObj.content}
+                        <textarea autoFocus placeholder='take a notes..' value={editObj.content}
                             onChange={(e) => setEditObj({ ...editObj, content: e.target.value })} />
                         {/* 
                 <Tooltip title="edit" placement="bottom" arrow>

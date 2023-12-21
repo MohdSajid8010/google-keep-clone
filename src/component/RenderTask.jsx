@@ -1,11 +1,10 @@
 import { useTaskContext } from '../context/TaskContext';
-import { Modal, Tooltip } from '@mui/material';
+import { Tooltip } from '@mui/material';
 import ColorPickerModal from './ColorPickerModal';
 import { useState } from 'react';
 import EditModal from './EditModal';
 import DeleteConfirmModal from "./DeleteConfirmModal"
 import { FaRegEdit } from "react-icons/fa";
-import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoMdColorPalette } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import "../styles/renderTask.css"
@@ -13,7 +12,7 @@ import "../styles/renderTask.css"
 
 const RenderTask = () => {
 
-    const { taskArr, settaskArr, setEditIndex, setEditObj, editObj, editIndex, isGridview } = useTaskContext();
+    const { taskArr, setEditIndex, setEditObj, isGridview } = useTaskContext();
 
     const [isColorPickerOpen, setIsColorPickerOpen] = useState(false)
     const [editColorIndex, setEditColorIndex] = useState(null);
@@ -49,8 +48,8 @@ const RenderTask = () => {
                     taskArr.map((obj, i) => {
                         return <div key={i} className={`oneTask ${isGridview ? "oneTaskgridView" : "oneTasklistView"}`} style={{ background: `${obj.color}` }}>
 
-                            <div className='title'>title:{obj.title}</div>
-                            <div className='content'>title:{obj.content}</div>
+                            <div className='title'>{obj.title}</div>
+                            <div className='content'>{obj.content}</div>
 
                             <div className='iconCont'>
                                 <Tooltip title="edit" placement="bottom" arrow>

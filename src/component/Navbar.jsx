@@ -1,15 +1,14 @@
 import "../styles/navbar.css"
 import { BsGrid, } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BiMenu, BiExpand } from "react-icons/bi";
 import { useTaskContext } from "../context/TaskContext";
-import { IoMenu } from "react-icons/io5";
 import { TfiLayoutMenuV } from "react-icons/tfi";
 
 const Navbar = () => {
 
-    const { taskArr, settaskArr, search, setSearch, isGridview, setView,isClickMenuIcon, setIsClickedMenuIcon } = useTaskContext();
-    
+    const { settaskArr, search, setSearch, isGridview, setView, isClickMenuIcon, setIsClickedMenuIcon } = useTaskContext();
+
 
     useEffect(() => {
         let TaskArr = JSON.parse(localStorage.getItem("TaskArr")) || []
@@ -24,7 +23,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='nav_left'>
-                <div className="icon-box">
+                <div >
                     {!isClickMenuIcon && <BiMenu className="icon" onClick={() => setIsClickedMenuIcon(!isClickMenuIcon)} />}
                     {isClickMenuIcon && <BiExpand className="icon" onClick={() => setIsClickedMenuIcon(!isClickMenuIcon)} />}
                 </div>
@@ -38,7 +37,7 @@ const Navbar = () => {
             </div>
 
             <div className='nav_right'>
-                <div className="icon-box">
+                <div >
                     {isGridview && <BsGrid className="icon" onClick={() => setView(false)} />}
                     {!isGridview && <TfiLayoutMenuV className="icon" onClick={() => setView(true)} />}
 

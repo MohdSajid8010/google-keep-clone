@@ -1,6 +1,5 @@
 import RenderTask from './RenderTask';
 import AddTaskForm from './AddTaskForm';
-import "../styles/notes.css"
 
 const Notes = () => {
 

@@ -1,0 +1,65 @@
+.editModal,
+.deleteConfirmModal,
+.colorPickerModalForAdd,
+.colorPickerModalForEditColor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 600px;
+    max-width: 90vw;
+    margin: auto;
+    font-size: 16px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.colorPickerModalForAdd,
+.colorPickerModalForEditColor {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.colorCirlce {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.editModal input {
+    padding: 10px;
+    outline: none;
+    border: none;
+
+}
+
+.editModal textarea {
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.editModal button,
+.deleteConfirmModal button {
+    background-color: white;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+.editModal button:hover,
+.deleteConfirmModal button:hover {
+    background-color: aliceblue;
+
+}

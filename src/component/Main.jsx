@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import "../styles/main.css"
-import { FaMinus, FaPlus } from "react-icons/fa6";
 import UserClickedcomponent from './UserClickedcomponent';
 import { useTaskContext } from '../context/TaskContext';
 

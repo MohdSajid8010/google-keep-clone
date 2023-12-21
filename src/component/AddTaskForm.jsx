@@ -1,15 +1,12 @@
-import { Modal, Tooltip } from '@mui/material'
+import { Tooltip } from '@mui/material'
 import { useTaskContext } from '../context/TaskContext';
 import { useState } from 'react';
 import { ColorPickerModalForAdd } from './ColorPickerModalForAdd';
-import { FaRegEdit } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoMdColorPalette } from "react-icons/io";
-import { MdDelete } from "react-icons/md";
 
 import "../styles/addTaskForm.css"
 
-const colorsArr = ["#e9e3d4", "#f6e2dd", "#aeccdc", "#d4e4ed", "#b4ddd3", "#e2f6d3", "#fff8b8", "#f39f76", "#faafa8"]
 const AddTaskForm = () => {
 
     const { isFormOpen, newTask, setNewTask, setIsFormOpen, taskArr, settaskArr } = useTaskContext();
@@ -47,10 +44,10 @@ const AddTaskForm = () => {
                 {isFormOpen ?
                     //add task form
                     <div className='addTaskForm' style={{ background: `${newTask.color}` }}>
-                        <input type="text" placeholder='title...' value={newTask.title}
+                        <input type="text" placeholder='Title...' value={newTask.title}
                             onChange={(e) => setNewTask({ ...newTask, title: e.target.value })} />
 
-                        <textarea autoFocus placeholder='take a notes..' value={newTask.content}
+                        <textarea autoFocus placeholder='Take a notes..' value={newTask.content}
                             onChange={(e) => setNewTask({ ...newTask, content: e.target.value })} />
 
                         <div className='icon_cont'>
@@ -80,7 +77,7 @@ const AddTaskForm = () => {
 
                     </div> :
                     <div className='takeANotesStripOuter'>
-                        <div className='takeANotesStrip' onClick={() => setIsFormOpen(true)}>Takes a notes click on it</div>
+                        <div className='takeANotesStrip' onClick={() => setIsFormOpen(true)}>Takes a notes</div>
                     </div>
                 }
             </div>
