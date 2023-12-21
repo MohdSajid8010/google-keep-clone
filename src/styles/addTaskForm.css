@@ -1,0 +1,91 @@
+.takeANotesStrip {
+    padding: 10px;
+    color: grey;
+    width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow:  0px 0px 4px rgb(189, 189, 189);
+
+}
+
+.takeANotesStripOuter {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTaskForm {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+    margin-bottom: 20px;
+}
+
+.addTaskForm input {
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.addTaskForm button {
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.addTaskForm textarea {
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.icon_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon_cont .left {
+    display: flex;
+    gap: 20px;
+}
+
+.closeBtn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px !important;
+}
+
+.closeBtn:hover {
+    background-color: aliceblue;
+
+}
+
+@media (max-width:650px){
+    .addTaskForm {
+        width: 400px;
+    }
+    .takeANotesStrip {
+        width: 400px;
+    }
+}
+
+@media (max-width:450px){
+    .addTaskForm {
+        width: 300px;
+    }
+    .takeANotesStrip {
+        width: 300px;
+    }
+}

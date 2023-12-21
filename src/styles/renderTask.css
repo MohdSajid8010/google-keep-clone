@@ -1,0 +1,97 @@
+.renderTask {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    /* padding: 0px 20px; */
+}
+
+.renderTaskgridView {
+    width: 100%;
+    border: 1px solid red;
+}
+
+
+
+.renderTasklistView {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 600px;
+}
+
+
+.oneTask {
+    overflow: scroll;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    outline: 1px solid grey;
+    height: max-content;
+    transition: all 0.4s;
+
+
+}
+
+.oneTaskgridView {
+    width: 17rem;
+    max-width: 17rem;
+
+}
+
+.oneTasklistView {
+    max-width: 100%;
+}
+
+
+
+
+
+.oneTask:hover {
+    box-shadow: 0px 0px 15px gray;
+    outline: none;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+.renderTask .title {
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.renderTask .oneTask .content {}
+
+.renderTask .iconCont {
+    display: flex;
+    gap: 10px;
+}
+
+.renderTask .iconCont button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+@media (max-width:650px) {
+    .renderTasklistView {
+        width: 400px;
+    }
+}
+
+@media (max-width:450px) {
+    .renderTasklistView {
+        width: 300px;
+    }
+}
