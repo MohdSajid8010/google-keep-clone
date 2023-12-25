@@ -6,7 +6,7 @@ const colorsArr = ["#e9e3d4", "#f6e2dd", "#aeccdc", "#d4e4ed", "#b4ddd3", "#e2f6
 
 //ColorPickerModal for edit color
 const ColorPickerModal = ({ isColorPickerOpen, setIsColorPickerOpen, editColorIndex, setEditColorIndex }) => {
-    const { taskArr, settaskArr,  } = useTaskContext();
+    const { taskArr, settaskArr, } = useTaskContext();
     function handleCloseColorPicker() {
         setIsColorPickerOpen(false)
         setEditColorIndex(null)
@@ -37,7 +37,7 @@ const ColorPickerModal = ({ isColorPickerOpen, setIsColorPickerOpen, editColorIn
                 {
                     colorsArr.map((colorval) => (
                         <div key={colorval} onClick={() => handleEditColor(colorval)}
-                            className='colorCirlce' style={{ background: `${colorval}`}}>
+                            className='colorCirlce' style={{ background: `${colorval}` }}>
                         </div>
                     ))
                 }
