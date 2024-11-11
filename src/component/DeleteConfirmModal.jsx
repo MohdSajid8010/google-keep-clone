@@ -34,10 +34,15 @@ const DeleteConfirmModal = ({ isopenDeleteModal, setisopenDeleteModal, deleteInd
 
       <div className='deleteConfirmModal'>
 
-        <h3>   Do you want to delete the task?</h3>
-        <div>
-          <button onClick={handleYesClick}>Yes</button>
-          <button onClick={handleNoClick}>No</button>
+        <h3 style={{textAlign:"center"}}>Do you want to delete the task ?</h3>
+        <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+          <button style={{border:"1px solid grey"}} onClick={handleYesClick}>Yes</button>
+          <button style={{border:"1px solid grey",marginLeft:"10px"}} onClick={handleNoClick}>No</button>
         </div>
 
       </div>
